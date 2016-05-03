@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Comecocos - Leire Soria Indiano</title>
+		<meta charset="UTF-8"> 
+		<link rel="stylesheet" type="text/css" href="comecocos.css">
+		<script type="text/javascript" src="comecocos.js"></script>
+	</head>
+	<body onload= "startGame()">
+		<canvas id="principal" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+		<div id="contenedor">
+			<canvas class="elegir" id="red" draggable="true" ondragstart="drag(event)"></canvas>
+			<canvas class="elegir" id="pink" draggable="true" ondragstart="drag(event)"></canvas>
+			<canvas class="elegir" id="orange" draggable="true" ondragstart="drag(event)"></canvas>
+		</div>
+	</body>
+</html>

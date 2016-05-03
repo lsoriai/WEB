@@ -1,0 +1,26 @@
+body{
+	background-color: black;
+}
+
+#principal{
+	border: 1px solid #0000ff;
+	position: absolute;
+	left: 50px;
+}
+
+#red{
+	position: absolute;
+	top: 530px;
+	left: 260px;
+}
+
+#pink{
+	position: absolute;
+	top: 530px;
+	left: 120px;
+}
+#orange{
+	position: absolute;
+	top: 530px;
+	left: 190px;
+}
