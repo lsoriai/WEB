@@ -1,0 +1,111 @@
+body{
+	background-color:#ffccff;
+	font-family: "Lobster", serif;
+}
+#contenedor{
+	width: 100%;
+	max-width: 1000px;
+	margin-top: 15px;
+	margin: auto;
+}
+/*------------------------------------------------------------------------*/
+header{
+	width: 100%;
+	height: 100%;
+}
+nav{
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 15px;
+	overflow: hidden;
+	width: 80%;
+}
+#titulo{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 15px;/*Si no hacemos esto sale muy ancho*/
+	margin-top: 15px;
+	font-weight: 100;
+	font-size: 50px;
+	color: #ff0066;
+	border-radius: 20px 20px;
+	border: 2px solid #ff0066;
+	box-sizing:border-box;
+}
+/*------------------------------------------------------------------------*/
+#barra_lateral{
+	width: 25%;
+	float:left;
+
+}
+.menu{
+	list-style: none;
+}
+div ul li{
+	width: 50%;
+	font-size: 20px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-sizing:border-box;
+	border-radius: 10px 10px;
+	border: 2px solid #cc33ff;
+	-webkit-transition: width 0.6s;
+	margin-top: 10px;
+
+}
+.menu li:hover{
+	width: 75%;
+	border: 2px solid #4d0066;
+}
+.menu a{
+	color: #cc33ff;
+	text-decoration: none; /*Quita el subrayado de hiperlink*/
+}
+.menu a:hover{
+	color: #4d0066;
+}
+
+/*------------------------------------------------------------------------*/
+#Contenido{
+	float: right;
+	margin-top: 15px;
+	width: 75%;
+}
+span{
+	font-weight: 100;
+}
+
+/*------------------------------------------------------------------------*/
+#intro{
+	font-size: 25px;
+	font-weight: 10;
+}
+
+.serie{
+	font-size: 35px;
+	color: #ff0066;
+	text-align: center;
+}
+
+.izq{
+	width: 30%;
+	float: left;
+}
+
+.drch{
+	width: 65%;
+	float:right;
+}
+
+.genero{
+	font-size: 30px;
+	color: #ff0066;
+	margin: auto;
+	border: 2px solid #ff0066;
+	margin-top: 20px;
+	border: 2px solid #ff0066;
+	border-radius: 10px 10px;
+	padding: 10px;
+	background-color: white;
+}

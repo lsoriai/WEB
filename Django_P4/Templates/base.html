@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+</head>
+<body>
+  <header>
+    <nav>
+      <p id="titulo">Tu tienda online</p>
+    </nav>
+  </header>
+  <div id="contenedor">
+    <aside>
+      <div id="barra_lateral">
+        <ul class = "menu">
+          <li><a href = '{% url "inicio" %}'>Inicio</a></li>
+          <li><a href = '{% url "bicis" %}'>Bicicletas</a></li>
+          <li><a href = '{% url "discos" %}'>Discos</a></li>
+          <li><a href = '{% url "libros" %}'>Libros</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  {% block index %}
+  {% endblock %}
+  {% block bicis %}
+  {% endblock %}
+  {% block discos %}
+  {% endblock %}
+  {% block libros %}
+  {% endblock %}
+
+
+</body>
+</html>
