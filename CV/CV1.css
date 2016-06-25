@@ -1,0 +1,55 @@
+.fondo{
+	background: -webkit-radial-gradient(#e6ffcc, #ceff99, #b5ff66)
+}
+
+.encabezado{
+	background-color: #c4ff4d;
+	height: 50px;
+	padding: 30px;
+	text-align: center;
+	border-radius: 40px 10px;
+	border: 2px solid  #669900;
+}
+
+#imagen{
+	position: relative;
+	top: 2px;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px 10px;
+	box-shadow: 5px 5px #356600
+}
+
+.redes{
+	text-align: center;
+	font-style: verdana;
+	position: relative;
+	top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ffff99;
+	outline-color:  #081a00;
+	outline-style: double;
+	width: 200px;
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+}
+
+.redes:hover{
+	width: 400px;
+	transform: rotate(360deg);
+}
+
+.iconos{
+	max-height: 5%;
+	max-width: 5%;
+}
+
+li{
+	list-style-type: none;
+}
+
+.informacion{
+	margin-left: 206px;
+	margin-bottom: 800px;
+	background-color: #ffffff;
+}

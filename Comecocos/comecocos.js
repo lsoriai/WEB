@@ -96,6 +96,16 @@ var AreaJuego = {
 		this.context.strokeRect(x, y, ancho, alto);
 		}
 	},
+	dibujar_contenedor_comecocos: function(color){
+		var contenedor = document.createElement('div');
+		contenedor.id = "contenedor_"+color;
+		contenedor.style.border = "1px solid #ffffff";
+		contenedor.style.width = "55px";
+		contenedor.style.height = "55px";
+		contenedor.style.float = "left";
+		contenedor.style.margin = "20px";
+		document.body.appendChild(contenedor);
+	},
 	borrar: function() {
 		this.context.clearRect(0,0,this.canvas.width, this.canvas.height)
 	}
@@ -167,8 +177,13 @@ function startGame(){
 		});
 
 		/*Pintamos los Pacmans de colores para el DRAG and DROP*/
-		AreaJuego.start(54,54,"red");
+		AreaJuego.dibujar_contenedor_comecocos("red");
+		var canvas_pacman = AreaJuego.start(54,54,"red");
 		pacman_rojo = new dibujar_pacman(27,27,"red");
+		document.getElementById("contenedor_red").appendChild(canvas_pacman);
+		
+
+		
 		AreaJuego.start(54,54,"pink");
 		pacman_rosa = new dibujar_pacman(27,27,"pink");
 		AreaJuego.start(54,54,"orange");
@@ -233,10 +248,10 @@ function colision (escenario, pos_x, pos_y){
 			AreaJuego.start(500,500,"principal");
 			AreaJuego.dibujar_bolas(bolas);
 			AreaJuego.dibujar_paredes();
-			alert(color);
 			pacman = new dibujar_pacman(pos_x,pos_y,color);
 			color_pacman=color;
 
 		}
+/*----------------------------------------------------------------------------------------*/
 
 
