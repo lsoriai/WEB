@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="stylesheet" href="style.css"/>
+  <script type="text/javascript">
+    function setcookie(producto){
+      document.cookie = document.cookie + ', bicis:' + producto;
+      cookie = document.cookie;
+      productos = cookie.split(",");
+      console.log(productos+"," +productos.length);
+      carro = document.getElementById("carro");
+      var fila = document.createElement("ol");
+      fila.innerHTML = "bici:"+producto+"";
+      carro.appendChild(fila);
+      fila.style.border = "none";
+      fila.style.fontSize = "14px";
+      fila.style.fontFamily= "verdana";
+      fila.style.padding = "0px";
+      fila.style.margin = "0px";
+      fila.style.listStyleType = "none";
+    }
+      
+    function mostrar(){
+      cookie = document.cookie;
+      productos = cookie.split(",");
+      i = 1;
+      while (i<productos.length){
+        carro = document.getElementById("carro");
+        var fila = document.createElement("ol");
+        fila.innerHTML = ""+productos[i]+"";
+        carro.appendChild(fila);
+        i++;
+        fila.style.border = "none";
+        fila.style.fontSize = "14px";
+        fila.style.fontFamily= "verdana";
+        fila.style.padding = "0px";
+        fila.style.margin = "0px";
+        fila.style.listStyleType = "none";
+      }
+      
+    }
+  </script>
+  <style>
+    h4{background-color: white; font-size: 15px; font-family: verdana; text-align: center; width: 80%}
+  </style>
+</head>
+<body onload="mostrar()">
+  <header>
+    <nav>
+      <p id="titulo">Tu tienda online</p>
+    </nav>
+  </header>
+    <div id="contenedor">
+      <aside>
+        <div id="barra_lateral">
+          <ul class = "menu">
+            <li><a href ="index.html">Inicio</a></li>
+            <li><a href ="bicis.html">Bicicletas</a></li>
+            <li><a href ="discos.html">Discos</a></li>
+            <li><a href ="libros.html">Libros</a></li>
+            <li><a href ="registrar.html">Registrarse</a></li>
+          </ul><br><br>
+          <h4>Carro de compra</h4>
+          <span id ="contenedor_carro">
+            <ul id="carro"></ul>
+          </span>
+        </div>
+      </aside>
+      <section>
+        <div id="Contenido">
+          <h1 id="intro">Novedades de verano</h1>
+          <div class ="libro">
+            <img class = "drch" src="bici_carretera.jpg" width="200" height="165">
+            <span class = "izq">
+              <h2>Fixie. Pin&#771o&#769n fijo</h2>
+              <p>Las bicicletas Fixies o de pin&#771o&#769n fijo, es una adaptacio&#769n de la bicicleta de pista. Con pin&#771o&#769n  fijo nos referimos a que mientras sigas pedaleando, la bicicleta sigue rodando, en el momento que dejes de pedalear, o al dirigir los pedales al sentido inverso, la bici frena. Las Fixies son ma&#769s ligeras que las convencionales, y alcanzan altas velocidades. Su este&#769tica combina elementos retro , sillines de cuero y colores llamativos.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('carretera')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="bici_hibrida.jpg" width="200" height="165">
+            <span class = "izq">
+              <h2>Bicicleta hi&#769brida</h2>
+              <p>Las bicicleta hi&#769brida, esta&#769 hecha para pedalear dentro y fuera de la ciudad. Son una mezcla entre carretera y montan&#771a, tambie&#769n tienen algunas caracteri&#769sticas de las bicis urbanas cla&#769sicas. Estas bicicletas son muy versa&#769tiles, se caracterizan por montar un cuadro de rigidez intermedia y unas ruedas ma&#769s finas que las de la bici de montan&#771a. Vienen equipadas generalmente con portaequipajes, luces, etc, al igual que las bicis urbanas cla&#769sicas.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('hibrida')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="bici_plegable.jpg" width="200" height="165">
+            <span class= "izq">
+              <h2>Bicicleta plegable</h2>
+              <p>Esta bicicleta esta&#769 hecha para distancias cortas, y que pueda combinarse con otro tipo de transporte, como autobu&#769s, metro, etc. Ya que por su disen&#771o plegable es fa&#769cil de cargar. Son ligeras, compactas, y esta&#769n hechas para que sea ra&#769pido y fa&#769cil plegarlas y desplegarlas. Generalmente poseen ruedas pequen&#771as para disminuir el taman&#771o, es por eso que no esta&#769n hechas para distancias largas. Su mayor ventaja es que te permite guardarla donde sea.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('plegable')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="bici_fatbike.jpg" width="200" height="165">
+            <span class= "izq">
+              <h2>Bicicleta de montan&#771a. FATBIKE</h2>
+              <p>Las Fat bikes comenzaron como bicicletas pensadas para rodar en nieve y en arena aprovechando la gran anchura de sus ruedas de hasta 5 pulgadas. Ba&#769sicamente es una bicicleta de montan&#771a con una llanta ma&#769s gorda de lo normal, pero su versatilidad y comodidad para rodar por todo tipo de terreno le han dado mucha popularidad.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('fatbike')">Comprar</button>
+          </div><br><br>
+        </div>
+      </section> 
+</body>

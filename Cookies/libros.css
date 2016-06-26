@@ -1,0 +1,30 @@
+#intro{
+	font-size: 25px;
+	font-weight: 10;
+}
+
+.serie{
+	font-size: 35px;
+	color: #ff0066;
+	text-align: center;
+}
+
+.izq{
+	width: 20%;
+	float: left;
+}
+
+.drch{
+	width: 75%;
+	float:right;
+}
+
+.foto{
+	margin-top: 25px;
+}
+
+.libro{
+	border: 2px solid #ff0066;
+	border-radius: 2px 2px;
+	margin: auto;
+}

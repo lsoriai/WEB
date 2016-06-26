@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="stylesheet" href="style.css"/>
+  <script type="text/javascript">
+    function setcookie(producto){
+      document.cookie = document.cookie + ', libro:' + producto;
+      cookie = document.cookie;
+      productos = cookie.split(",");
+      carro = document.getElementById("carro");
+      var fila = document.createElement("ol");
+      fila.innerHTML = "libro:"+producto+"";
+      carro.appendChild(fila);
+      fila.style.border = "none";
+      fila.style.fontSize = "14px";
+      fila.style.fontFamily= "verdana";
+      fila.style.padding = "0px";
+      fila.style.margin = "0px";
+      fila.style.listStyleType = "none";
+    }
+      
+    function mostrar(){
+      cookie = document.cookie;
+      productos = cookie.split(",");
+      i = 1;
+      while (i<productos.length){
+        carro = document.getElementById("carro");
+        var fila = document.createElement("ol");
+        fila.innerHTML = ""+productos[i]+"";
+        carro.appendChild(fila);
+        i++;
+        fila.style.border = "none";
+        fila.style.fontSize = "14px";
+        fila.style.fontFamily= "verdana";
+        fila.style.padding = "0px";
+        fila.style.margin = "0px";
+        fila.style.listStyleType = "none";
+      }
+      
+    }
+  </script>
+  <style>
+    h4{background-color: white; font-size: 15px; font-family: verdana; text-align: center; width: 80%}
+  </style>
+</head>
+<body onload = "mostrar()">
+  <header>
+    <nav>
+      <p id="titulo">Tu tienda online</p>
+    </nav>
+  </header>
+    <div id="contenedor">
+      <aside>
+        <div id="barra_lateral">
+          <ul class = "menu">
+            <li><a href ="index.html">Inicio</a></li>
+            <li><a href ="bicis.html">Bicicletas</a></li>
+            <li><a href ="discos.html">Discos</a></li>
+            <li><a href ="libros.html">Libros</a></li>
+            <li><a href ="registrar.html">Registrarse</a></li>
+          </ul><br><br>
+          <h4>Carro de compra</h4>
+          <span id ="contenedor_carro">
+            <ul id="carro"></ul>
+          </span>
+        </div>
+      </aside>
+      <section>
+        <div id="Contenido">
+          <h1 id="intro">Las mejores colecciones</h1>
+          <h2 class="serie"><p>Harry Potter</p></h2>
+          <div class ="libro">
+            <img class = "drch" src="hp_y_la_piedra_filosofal.jpg" width="150" height="200">
+            <span class = "izq">
+              <h2>Harry Potter y la piedra filosofal</h2>
+              <p>El di&#769a de su 11 cumplean&#771os, Harry Potter descubre que es un mago y que tiene la oportunidad de estudiar en el Colegio Hogwarts de Magia y Hechiceri&#769a. Una vez alli&#769 descubrira&#769 que es una persona muy especial conocida como el nin&#771o que sobrevivio&#769: con tan so&#769lo un an&#771o de vida salio&#769 con vida de un ataque del tenebroso mago conocido como Lord Voldemort, el cual se debilito&#769. Ahora, ira&#769 descubriendo ma&#769s secretos de su pasado y el de su familia junto a sus amigos Ron Weasley y Hermione Granger.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('filosofal')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="hp_y_la_camara.PNG" width="150" height="200">
+            <span class = "izq">
+              <h2>Harry Potter y la ca&#769mara secreta</h2>
+              <p>Tras derrotar una vez ma&#769s a lord Voldemort, Harry espera impaciente en casa de sus insoportables ti&#769os el inicio del segundo curso. Sin embargo, la espera dura poco, pues un elfo aparece en su habitacio&#769n y le advierte que una amenaza mortal se cierne sobre la escuela. Asi&#769 pues, acomp71ado de Ron, su mejor amigo, se dirige a Hogwarts en un coche volador.  Pero ¿puede un aprendiz de mago defender la escuela de los malvados que pretenden destruirla? Sin saber que alguien ha abierto la Ca&#769mara de los Secretos, dejando escapar una serie de monstruos peligrosos, Harry y sus amigos tendra&#769n que enfrentarse con aran&#771as gigantes, serpientes encantadas, fantasmas enfurecidos y, sobre todo, con la mismi&#769sima reencarnacio&#769n de su ma&#769s temible adversario.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('camara')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="hp_y_el_prisionero_de_azkaban.jpg" width="150" height="200">
+            <span class = "izq">
+              <h2>Harry Potter y el prisionero de Azkaban</h2>
+              <p>Cuando Harry Potter y sus amigos vuelven a Hogwarts para cursar su tercer an&#771o de estudios, se ven involucrados en un misterio: de la prisio&#769n para magos de Azkaban se ha fugado Sirius Black, un peligroso mago que fue co&#769mplice de Lord Voldemort y que intentara&#769 vengarse de Harry Potter. El joven aprendiz de mago contribuyo&#769 en gran medida a la condena de Sirius, por lo que hay razones para temer por su vida.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('azkaban')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="hp_y_el_caliz_de_fuego.jpg" width="150" height="200">
+            <span class = "izq">
+              <h2>Harry Potter y el ca&#769liz de fuego</h2>
+              <p>La cuarta parte de la serie del nin&#771o mago comienza con la Copa Internacional de Quidditch. Cuenta tambie&#769n el inicio de la atraccio&#769n por Cho Chang y otro an&#771o de magia, en el que una gran sorpresa obligara&#769 a Harry a enfrentarse a muchos desafi&#769os temibles. Tambie&#769n habra&#769 un torneo de magia para tres escuelas, y el temido regreso de "Aquel-que-no-debe-ser-nombrado".</p>
+            </span>
+            <button name="boton" onclick ="setcookie('caliz')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="hp_y_la_orden_del_fenix.jpg" width="150" height="200">
+            <span class = "izq">
+              <h2>Harry Potter y la orden del fe&#769nix</h2>
+              <p>Las tediosas vacaciones en casa de sus ti&#769os todavi&#769a no han acabado y Harry se encuentra ma&#769s inquieto que nunca. Apenas ha tenido noticias de Ron y Hermione y presiente que algo extran&#771o esta&#769 sucediendo en Hogwarts. En efecto, cuando por fin empieza el curso, sus temores se hacen realidad. El Ministerio de Magia niega que Voldemort haya regresado e inicia una campan&#771a de desprestigio contra Harry y Dumbledore, encomendando a la horrible profesora Dolores Umbridge la tarea de vigilar todos sus movimientos. Asi&#769, pues, adema&#769s de sentirse solo e incomprendido, Harry sospecha que Voldemort puede adivinar sus pensamientos e intuye que el temible mago trata de apoderarse de un objeto secreto que le permitiri&#769a recuperar su destructivo poder.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('orden')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="hp_y_el_misterio_del_principe.jpg" width="150" height="200">
+            <span class = "izq">
+              <h2>Harry Potter y el misterio del Pri&#769ncipe mestizo</h2>
+              <p>Con diecise&#769is an&#771os cumplidos, Harry inicia el sexto curso en Hogwarts en medio de terribles acontecimientos que asolan Inglaterra. Elegido capita&#769n del equipo de Quidditch, los entrenamientos, los exa&#769menes y las chicas ocupan todo su tiempo, pero la tranquilidad dura poco. A pesar de los fe&#769rreos controles de seguridad que protegen la escuela, dos alumnos son brutalmente atacados. Dumbledore sabe que se acerca el momento, anunciado por la Profeci&#769a, en que Harry y Voldemort se enfrentara&#769n a muerte. El anciano director pedira&#769 ayuda a Harry y juntos emprendera&#769n un peligroso viaje. Para debilitar al enemigo, el joven mago cuenta con la ayuda de un viejo libro de pociones perteneciente a un misterioso personaje que se hace llamar el Pri&#769ncipe Mestizo.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('principe')">Comprar</button>
+          </div><br><br>
+
+          <div class ="libro">
+            <img class = "drch" src="hp_y_las_reliquias_de_la_muerte.jpg" width="150" height="200">
+            <span class = "izq">
+              <h2>Harry Potter y las reliquias de la muerte</h2>
+              <p>Una misio&#769n casi imposible cae sobre los hombros de Harry: debera&#769 encontrar y destruir a los u&#769ltimos horrocruxes para poner fin al reinado de Lord Voldemort. En el episodio final de la saga, el joven hechicero de 17 an&#771os emprende con sus amigos Hermione Granger y Ron Weasley un peligroso viaje por Inglaterra para encontrar los objetos que contienen los fragmentos del alma del Sen&#771or Tenebroso, que son los que garantizan su longevidad. Pero la tarea no sera&#769 fa&#769cil, pues el poder del lado oscuro crece cada vez ma&#769s, y las ma&#769s firmes lealtades sera&#769n puestas a prueba. Harry debera&#769 usar todos los conocimientos que ha adquirido gracias a Dumbledore para enfrentarse a su enemigo y encontrar la forma de sobrevivir a esta u&#769ltima aventura.
+              El final ha llegado. Harry, Hermione y Ron tendra&#769n que recuperar la espada de Gryffindor para encontrar y destruir los u&#769ltimos horrocruxes. Mientras tanto, Lord Voldemort esta&#769 a punto de apoderarse por completo de Hogwarts y de conseguir su objetivo: matar a Harry Potter. La u&#769nica esperanza de Harry es encontrar los horrocruxes antes de que Voldemort lo encuentre a e&#769l. Buscando pistas, descubre una antigua y olvidada historia: la leyenda de las reliquias de la muerte, que podri&#769a dar al malvado Lord el poder definitivo. Pero el futuro de Harry esta&#769 escrito desde que nacio&#769 e incluye una misio&#769n para la que se ha estado preparando desde que llego&#769 a Hogwarts: la batalla final contra Voldemort.</p>
+            </span>
+            <button name="boton" onclick ="setcookie('reliquias')">Comprar</button>
+          </div><br><br>
+        </div>
+      </section>
+          
+</body>
