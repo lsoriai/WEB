@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="stylesheet" href="style.css"/>
+  <script type="text/javascript" src="/ayax.js"></script>
+  <script type="text/javascript" src="cookie.js"></script>
+  
+  <style>
+    h4{background-color: white; font-size: 15px; font-family: verdana; text-align: center; width: 80%}
+  </style>
+</head>
+<body onload="mostrar()">
+  <header>
+    <nav>
+      <p id="titulo">Tu tienda online</p>
+    </nav>
+  </header>
+    <div id="contenedor">
+      <aside>
+        <div id="barra_lateral">
+          <ul class = "menu">
+            <li><a href ="index.html">Inicio</a></li>
+            <li><a href ="bicis.html">Bicicletas</a></li>
+            <li><a href ="discos.html">Discos</a></li>
+            <li><a href ="libros.html">Libros</a></li>
+            <li><a href ="registrar.html">Registrarse</a></li>
+          </ul><br><br>
+          <h4>Carro de compra</h4>
+            <ul id="carro"></ul>
+        </div>
+      </aside>
+      <section>
+        <div id="Contenido">
+          <div class="buscador">
+            BUSCADOR: <input type="text" id ="barra_buscador" list="desplegable" onkeydown="buscador()">
+            <datalist id = "desplegable" ></datalist>
+          </div>
+          <span id="intro">A continuaci&#769on se visualizara&#769n las u&#769ltimas novedades musicales de nuestro pai&#769s</span>
+          <div>
+            <p><span class="genero">Latino</span></p>
+              <iframe width="340" height="230" src="https://www.youtube.com/embed/ZNN7NTl83cI" frameborder="0" allowfullscreen></iframe>
+              <iframe width="340" height="230" src="https://www.youtube-nocookie.com/embed/kkx-7fsiWgg?list=RDkkx-7fsiWgg" frameborder="0" allowfullscreen></iframe>
+              <button name="boton" onclick ="setcookie('royce')">Comprar Prince Royce - Corazon sin cara</button>
+              <button name="boton" onclick ="setcookie('nickyJam')">Comprar Nicky Jam - Hasta el amanecer</button>
+          </div><br>
+          <div>
+            <p><span class="genero">Dance</span></p>
+              <iframe width="340" height="230" src="https://www.youtube-nocookie.com/embed/EoYOCxP6yIA" frameborder="0" allowfullscreen></iframe>
+              <iframe width="340" height="230" src="https://www.youtube-nocookie.com/embed/awa188svgmg" frameborder="0" allowfullscreen></iframe>
+              <button name="boton" onclick ="setcookie('hardwell')">Comprar Hardwell - Echo</button>
+              <button name="boton" onclick ="setcookie('nickyRomero')">Comprar Nicky Romero - Harmony</button>
+          </div><br>
+          <div>
+            <p><span class="genero">Rock</span></p>
+              <iframe width="340" height="230" src="https://www.youtube-nocookie.com/embed/kXYiU_JCYtU" frameborder="0" allowfullscreen></iframe>
+              <iframe width="340" height="230" src="https://www.youtube-nocookie.com/embed/74s3WXMZZ3Y" frameborder="0" allowfullscreen></iframe>
+              <button name="boton" onclick ="setcookie('LinkinPark')">Comprar Linkin Park - Numb</button>
+              <button name="boton" onclick ="setcookie('30second')">Comprar 30 second to Mars - The kill</button>
+          </div><br><br>
+</body>
