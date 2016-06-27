@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat con nodeJs + Socket.io</title>
+  <!--Para que el cliente tambien este conectado y se entere de las posibles
+  conexiones hemos de agregar dos librerias-->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: verdana;
+    }
+    ul{
+      list-style-type: none;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+    #controls{
+      position: absolute;
+      bottom: 0px;
+      left:0px;
+      padding: 20px;
+      border-top: 2px #333 solid;
+      display:block;
+      width: 100%
+    }
+    #controls #btn{
+      float: right;
+      padding: 20px;
+    }
+
+    #controls #msj{
+      height: 100%;
+      width: 100%;
+      display:block;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var socket = io(); //Ya estamos conectandonos
+
+    $(function(){
+      $("form").submit(function(){
+        var mensaje= $("#msj").val();
+        var user = $("#user").val();
+        if (mensaje=='') return false;
+        //provoca en el servidor un evento. Le mandamos el parámetro mensaje
+        console.log(mensaje+user);
+        datos_enviar = user +": " + mensaje;
+        socket.emit('message', datos_enviar);
+        $("#msj").val('').focus();
+        return false;
+      });
+    });
+
+    //Como cuando nos desconectamos, se envia un mensaje, hemos de 
+    //crear un evento mensaje
+    socket.on('message', function(msg){
+      $("#message").append($('<li>').text(msg));
+    });
+  </script>
+  <ul id="message">
+    
+
+  </ul>
+  <div id="controls">
+    <form action="">
+      <input type ="text" id="user" placeholder="Escribe tu nick">
+      <input type="text" id="msj" placeholder="Escribe tu mensaje...">
+      <input type="submit" id="bnt" value="Enviar">
+    </form>
+</body>
+</html>
+
+
+
+
+
