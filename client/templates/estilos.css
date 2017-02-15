@@ -1,0 +1,93 @@
+body{
+	background-color: #222;
+}
+
+.navbar{
+	background-color: orange;
+}
+
+.navbar-brand {
+	color: #222;
+	background-color: black;
+}
+
+.navbar .nav >li >a {
+	color: #222;
+}
+
+.jumbotron{
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+.portada{
+	width: 100%;
+}
+
+.encima{
+	background-color: rgba(255,255,255,0.3);
+	position: absolute;
+	top: 200px;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 5px 5px;
+}
+
+.texto{
+	margin: 5px;
+	font-size: 30px;
+	margin:10px;
+	color: black;
+}
+
+#foro{
+	padding:0px;
+	width: 70%;
+	float: left;
+}
+
+.modal-panel{
+	padding-left:0px;
+}
+
+.panel-default{
+	border-color: orange;
+}
+
+.panel-heading{
+	background-color: transparent;
+}
+
+.input-group{
+	margin-top:15px;
+	width: 100%;
+}
+
+#entrada_foro{
+	border:none;
+	background-color:orange;
+	color: black;
+}
+-webkit-input-placeholder{color:orange;}
+
+.entrada{
+	background-color: rgba(255, 153, 0, 0.3);
+	border-radius: 3px 3px;
+}
+
+.entrada >h4{
+	padding-top:5px;
+	padding-left:6px;
+	padding-bottom: 0px;
+}
+
+
+.entrada >li{
+	list-style:none
+}
+
+.jumbotron{
+	padding: 0px;
+	margin-bottom: 0px;
+}

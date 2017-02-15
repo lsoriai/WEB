@@ -1,0 +1,29 @@
+.modal-content{
+	overflow: auto;
+	border-radius: 0px;
+	color:#e65c00;
+}
+
+.panel-heading{
+	background-color: orange !important;
+	color:black !important;
+}
+
+.btn-default{
+	background-color:orange;
+	color:black;
+	border-color: orange;
+}
+
+/*Para darle estilo a los campos erróneos a la hora de introducir los datos, empleamos las siguientes clase*/
+input.error{
+	background-color: rgb(255, 231, 231);
+}
+
+.error{
+	color:red;
+}
+
+.close .sr-only{
+	color:orange;
+}

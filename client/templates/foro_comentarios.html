@@ -1,0 +1,52 @@
+<template name="foro_comentarios">
+	{{>topBar}}
+	{{>encabezado}}
+	{{>comentario}}
+</template>
+
+<template name="comentario">
+  <div id="foro" class="container-fluid">
+  	<div class="modal-body">
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+      			<h3 class="panel-title" style="text-align:center"><b>Lista de comentarios</b></h3>
+    		</div>
+    		<div class="panel-body">
+    			<div>
+	      			{{#each comentarios}}
+	      				<div class="panel panel-default">
+	      					<div class="panel-heading">
+	      						<i class="glyphicon glyphicon-user"></i>{{user_id}}
+	      					</div>
+		      				<div class="panel-body">
+		      					{{texto}}
+		      				</div>
+		      			</div>
+	      			{{/each}}
+	      		</div>
+	  			<form method="post" id="form-comentario" style="background-color: transparent">
+      				{{#if currentUser}}
+      					<div class="form-group">
+	      					<div class="input-group">
+	        					<div class="panel panel-default">
+	        						<div class="panel-heading">
+	          							<p>Añade un comentario</p>
+	        						</div>
+	        						<div class="panel-body">
+	          							<textarea placeholder="Comenta el tema" id="nuevo_comentario" required style="border:none;width:100%"></textarea>
+	        						</div>
+	        					</div>
+	      					</div>
+        				</div>
+        				<input type="submit" class="btn btn-default btn-primary" value="Enviar" style="float:right">
+      				{{else}}
+         				<p>SI QUIERES ESCRIBIR EN EL FORO NECESITAS ESTAR REGISTRADO</p>
+      				{{/if}}
+      			</form>
+    		</div>
+	 	</div>
+  	</div>
+  </div>
+</template>
+
+

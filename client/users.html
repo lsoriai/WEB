@@ -1,0 +1,129 @@
+<template name="registro">
+	<div class="modal face">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" name="button"><span aria-hidden="true">x</span><span class="sr-only">close</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title" style="text-align:center"><b>REGISTRATE</b></h3>
+						</div>
+						<div class="panel-body">
+							<form method="post" id="form-registro">
+								<div class="form-group">
+									<label>Nombre de usuario</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input type="text" class="form-control" name="regusuario" placeholder="Usuario" id="regusuario" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Email</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+										<input type="email" class="form-control" name="regemail" placeholder="Email" id="regemail" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Contraseña</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+										<input type="password" class="form-control" name="regcontraseña1" placeholder="Contraseña" id="regcontraseña1" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Repita la contraseña</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+										<input type="password" class="form-control" name="regcontraseña2" placeholder="Contraseña" id="regcontraseña2" required>
+									</div>
+								</div>
+								<br>
+								<div>
+									<input type="submit" class="btn btn-default btn-primary" name="crearCuenta" value="Crear Cuenta">
+									<button type="reset" class="btn btn-default btn-primary" name="button" style="text-align:right">Limpiar formulario</button>
+								</div>
+							</form>
+							<br><br>
+							<p style="text-align:center"><a href="" data-toggle="modal" id="login">¿Ya tienes cuenta?</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="login">
+	<div class="modal face">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" name="button"><span aria-hidden="true">x</span><span class="sr-only">close</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title" style="text-align:center"><b>IDENTIFICATE</b></h3>
+						</div>
+						<div class="panel-body">
+							<form method="post" id="form-login">
+								<div class="form-group">
+									<label>Nombre de usuario</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input type="text" class="form-control" name="logusuario" placeholder="Usuario" id="logusuario" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Contraseña</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+										<input type="password" class="form-control" name="logcontraseña" placeholder="Contraseña" id="logcontraseña" required>
+									</div>
+								</div>
+								<br>
+								<div align="center">
+									<input type="submit" class="btn btn-default btn-primary" name="login" value="Entrar">
+									<button type="reset" class="btn btn-default btn-primary" name="button" style="text-align:right">Limpiar formulario</button>
+								</div>
+							</form>
+							<br>
+							<p style="text-align:center"><a href="" data-toggle="modal" id="registro">¿Aún no tienes cuenta?</a></p>
+							<p style="text-align:center"><a href="" data-toggle="modal" id="olvidar-contraseña">¿Olvidaste tu contraseña?</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="cerrarSesion">
+	<div class="modal face">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" name="button"><span aria-hidden="true">x</span><span class="sr-only">close</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title" style="text-align:center">Cerrar sesión : {{currentUser.username}}</h3>
+						</div>
+						<div class="panel-body">
+							<form method="post" id="form-logout">
+								<div align="center">
+									<label>Pulsa el botón para cerrar sesión</label><br><br>
+									<input type="submit" class="btn btn-default btn-primary" name="logout" value="Cerrar Sesion" >
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

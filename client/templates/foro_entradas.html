@@ -1,0 +1,45 @@
+<template name="foro_entradas">
+  <div id="foro" class="container-fluid">
+    <div class="modal-body">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title" style="text-align:center"><b>ÚLTIMAS ENTRADAS</b></h3>
+        </div>
+        <div class="panel-body">
+          {{#each entradas}}
+            <div class="entrada">
+              <h4>TEMA: {{title}}</h4>
+              <li>
+                <span style="padding: 5px">Usuario: {{user_id}}</span>
+                <span style="float:right; padding-right:5px">
+                  <a href="{{pathFor 'foro_comentarios' _id=_id}}">
+                    <i class="material-icons">Discute el tema</i>
+                  </a>
+                </span>
+              </li>
+            </div>
+          {{/each}}
+          <form method="post" id="form-foro" style="background-color: transparent">
+            {{#if currentUser}}
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <input type="text" size="100%" placeholder="Crear una entrada" id="entrada_foro" required>
+                    </div>
+                    <div class="panel-body">
+                      <textarea placeholder="Comenta el tema" id="comentario_foro" required style="border:none;width:100%"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input type="submit" class="btn btn-default btn-primary" value="Enviar" style="float:right">
+            {{else}}
+               <p>SI QUIERES ESCRIBIR EN EL FORO NECESITAS ESTAR REGISTRADO</p>
+            {{/if}}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
